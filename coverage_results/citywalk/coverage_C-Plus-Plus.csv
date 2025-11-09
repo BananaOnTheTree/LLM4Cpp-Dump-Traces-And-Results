@@ -1,0 +1,18 @@
+Function Name,File Name,Project,Initial Statement Coverage,Total Statement Coverage,Statement Coverage Change,Initial Branch Coverage,Total Branch Coverage,Branch Coverage Change
+init_good_suffix_std_string_const_std_vector_size_t_,boyer_moore.cpp,C-Plus-Plus,100.0,100.0,0.0,91.66666666666667,91.66666666666667,0.0
+search_std_string_const_pattern_const_,boyer_moore.cpp,C-Plus-Plus,100.0,100.0,0.0,100.0,100.0,0.0
+cycleSort_std_vector_int_const_,cycle_sort.cpp,C-Plus-Plus,90.3225806451613,90.3225806451613,0.0,68.18181818181819,68.18181818181819,0.0
+findShiftTable_std_string_const_,horspool.cpp,C-Plus-Plus,100.0,100.0,0.0,87.5,87.5,0.0
+horspool_std_string_const_std_string_const_,horspool.cpp,C-Plus-Plus,100.0,100.0,0.0,90.0,90.0,0.0
+karatsuba_algorithm_std_string_std_string_,karatsuba.cpp,C-Plus-Plus,100.0,100.0,0.0,100.0,100.0,0.0
+safe_substr_std_string_const_int64_t_int64_t_int64_t_,karatsuba.cpp,C-Plus-Plus,90.0,90.0,0.0,83.33333333333333,83.33333333333333,0.0
+librarySort_intmul_int_,library_sort.cpp,C-Plus-Plus,89.36170212765957,89.36170212765957,0.0,70.0,70.0,0.0
+manacher_std_string_const_,manacher_algorithm.cpp,C-Plus-Plus,97.43589743589743,97.43589743589743,0.0,75.0,75.0,0.0
+oddEven_vector_int_int_,odd_even_sort.cpp,C-Plus-Plus,100.0,100.0,0.0,80.0,80.0,0.0
+step_ith_uint16_t_std_vector_uint64_t_const_,radix_sort2.cpp,C-Plus-Plus,100.0,100.0,0.0,50.0,50.0,0.0
+radixsort_int_int_,radix_sort.cpp,C-Plus-Plus,100.0,100.0,0.0,61.111111111111114,61.111111111111114,0.0
+minSwaps_int_int_,swap_sort.cpp,C-Plus-Plus,100.0,100.0,0.0,70.0,70.0,0.0
+insertionSort_int_int_int_,tim_sort.cpp,C-Plus-Plus,100.0,100.0,0.0,100.0,100.0,0.0
+merge_int_int_int_int_,tim_sort.cpp,C-Plus-Plus,100.0,100.0,0.0,83.33333333333333,83.33333333333333,0.0
+timSort_int_int_,tim_sort.cpp,C-Plus-Plus,46.15384615384615,46.15384615384615,0.0,33.333333333333336,33.333333333333336,0.0
+AVERAGE - C-Plus-Plus,,C-Plus-Plus,94.57962664766028,94.57962664766028,0.0,77.71622474747475,77.71622474747475,0.0

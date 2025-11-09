@@ -11,7 +11,8 @@ Repository layout
 Quick start
 
 1. Inspect the coverage CSVs in `coverage_results/`.
-2. Run the analysis script:
+2. To generate new coverage summaries, first unzip the relevant logs in `ai_test_logs/`.
+3. Run the analysis script:
    python analyze_coverage.py
 
 

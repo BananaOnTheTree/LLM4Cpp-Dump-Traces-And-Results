@@ -1,0 +1,13 @@
+Function Name,File Name,Project,Initial Statement Coverage,Total Statement Coverage,Statement Coverage Change,Initial Branch Coverage,Total Branch Coverage,Branch Coverage Change
+CBase64_decodeBase64_std_string_,base64.h,algorithms,100.0,100.0,0.0,75.0,75.0,0.0
+CBase64_encodeBase64_unsigned_charmul_int_,base64.h,algorithms,100.0,100.0,0.0,87.5,87.5,0.0
+CBase64_indexOfCode_char_const_,base64.h,algorithms,100.0,100.0,0.0,75.0,75.0,0.0
+BST_KeyT_ValueT_deleteKey_KeyT_const_,binary_search_tree.h,algorithms,94.11764705882354,94.11764705882354,0.0,87.5,87.5,0.0
+BST_KeyT_ValueT_find_KeyT_const_,binary_search_tree.h,algorithms,100.0,100.0,0.0,100.0,100.0,0.0
+BST_KeyT_ValueT_insert_KeyT_const_ValueT_const_,binary_search_tree.h,algorithms,100.0,100.0,0.0,100.0,100.0,0.0
+insertion_sort_Tmul_int_,insertion_sort.h,algorithms,100.0,100.0,0.0,100.0,100.0,0.0
+kmp_search_char_constmul_char_constmul_,kmp.h,algorithms,100.0,100.0,0.0,100.0,100.0,0.0
+kmp_table_char_constmul_intmul_int_,kmp.h,algorithms,100.0,100.0,0.0,100.0,100.0,0.0
+max_subarray_int_int_intmul_intmul_,max_subarray.h,algorithms,100.0,100.0,0.0,100.0,100.0,0.0
+palindrome_char_constmul_,palindrome.h,algorithms,100.0,100.0,0.0,87.5,87.5,0.0
+AVERAGE - algorithms,,algorithms,99.46524064171122,99.46524064171122,0.0,92.04545454545455,92.04545454545455,0.0
