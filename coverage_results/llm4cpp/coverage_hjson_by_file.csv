@@ -1,0 +1,3 @@
+File Name,Project,Initial Statement Coverage,Total Statement Coverage,Statement Coverage Change,Initial Branch Coverage,Total Branch Coverage,Branch Coverage Change
+hjson_decode.cpp,hjson,68.54774475802904,76.02750579966299,7.479761041633951,54.76403646858193,64.62514757969304,9.86111111111111
+hjson_encode.cpp,hjson,51.81221433136756,74.82865790123854,23.01644356987099,37.817293817293816,64.51378251378252,26.696488696488696

@@ -1,0 +1,7 @@
+File Name,Project,Initial Statement Coverage,Total Statement Coverage,Statement Coverage Change,Initial Branch Coverage,Total Branch Coverage,Branch Coverage Change
+base64.h,algorithms,100.0,100.0,0.0,79.16666666666667,79.16666666666667,0.0
+binary_search_tree.h,algorithms,98.03921568627452,98.03921568627452,0.0,91.66666666666667,95.83333333333333,4.166666666666667
+insertion_sort.h,algorithms,100.0,100.0,0.0,100.0,100.0,0.0
+kmp.h,algorithms,93.02884615384616,96.15384615384616,3.125,85.41666666666666,91.66666666666666,6.25
+max_subarray.h,algorithms,100.0,100.0,0.0,100.0,100.0,0.0
+palindrome.h,algorithms,93.54838709677419,100.0,6.451612903225808,81.25,87.5,6.25
