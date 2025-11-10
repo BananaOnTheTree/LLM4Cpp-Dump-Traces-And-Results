@@ -7,7 +7,7 @@ BST_KeyT_ValueT_find_KeyT_const_,binary_search_tree.h,algorithms,100.0,100.0,0.0
 BST_KeyT_ValueT_insert_KeyT_const_ValueT_const_,binary_search_tree.h,algorithms,100.0,100.0,0.0,100.0,100.0,0.0
 insertion_sort_Tmul_int_,insertion_sort.h,algorithms,100.0,100.0,0.0,100.0,100.0,0.0
 kmp_search_char_constmul_char_constmul_,kmp.h,algorithms,93.75,100.0,6.25,87.5,100.0,12.5
-kmp_table_char_constmul_intmul_int_,kmp.h,algorithms,92.3076923076923,92.3076923076923,0.0,83.33333333333333,83.33333333333333,0.0
+kmp_table_char_constmul_intmul_int_,kmp.h,algorithms,92.3076923076923,100.0,7.692307692307693,83.33333333333333,100.0,16.66666666666667
 max_subarray_int_int_intmul_intmul_,max_subarray.h,algorithms,100.0,100.0,0.0,100.0,100.0,0.0
 palindrome_char_constmul_,palindrome.h,algorithms,93.54838709677419,100.0,6.451612903225808,81.25,87.5,6.25
 init_good_suffix_std_string_const_std_vector_size_t_,boyer_moore.cpp,C-Plus-Plus,100.0,100.0,0.0,83.33333333333333,83.33333333333333,0.0
@@ -131,4 +131,4 @@ XMLUtil_ToInt64_char_constmul_int64_tmul_,tinyxml.cpp,tinyxml2,100.0,100.0,0.0,8
 XMLUtil_ToInt_char_constmul_intmul_,tinyxml.cpp,tinyxml2,100.0,100.0,0.0,83.33333333333333,83.33333333333333,0.0
 XMLUtil_ToUnsigned64_char_constmul_uint64_tmul_,tinyxml.cpp,tinyxml2,100.0,100.0,0.0,100.0,100.0,0.0
 XMLUtil_ToUnsigned_char_constmul_unsignedmul_,tinyxml.cpp,tinyxml2,100.0,100.0,0.0,100.0,100.0,0.0
-AVERAGE - LLM4CPP,,llm4cpp,81.93532629427881,90.70096959301227,8.765643298733483,65.26541580113009,75.64170287384573,10.376287072715643
+AVERAGE - LLM4CPP,,llm4cpp,81.93532629427881,90.75924465128735,8.82391835700854,65.26541580113009,75.77397800612087,10.508562204990776
