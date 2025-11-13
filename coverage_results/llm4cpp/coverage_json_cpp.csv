@@ -1,0 +1,29 @@
+Function Name,File Name,Project,Initial Statement Coverage,Total Statement Coverage,Statement Coverage Change,Initial Branch Coverage,Total Branch Coverage,Branch Coverage Change
+Json_contains_std_string_const_,json.cpp,json_cpp,66.66666666666667,100.0,33.33333333333333,50.0,100.0,50.0
+Json_getArray_,json.cpp,json_cpp,100.0,100.0,0.0,100.0,100.0,0.0
+Json_getBool_,json.cpp,json_cpp,100.0,100.0,0.0,100.0,100.0,0.0
+Json_getDouble_,json.cpp,json_cpp,100.0,100.0,0.0,100.0,100.0,0.0
+Json_getFloat_,json.cpp,json_cpp,75.0,100.0,25.0,66.66666666666667,100.0,33.33333333333333
+Json_getLong_,json.cpp,json_cpp,100.0,100.0,0.0,100.0,100.0,0.0
+Json_getNumber_,json.cpp,json_cpp,80.0,100.0,20.0,75.0,100.0,25.0
+Json_getObject_,json.cpp,json_cpp,100.0,100.0,0.0,100.0,100.0,0.0
+Json_getString_,json.cpp,json_cpp,66.66666666666667,100.0,33.33333333333333,50.0,100.0,50.0
+Json_Json_char_constmul_,json.cpp,json_cpp,100.0,100.0,0.0,100.0,100.0,0.0
+Json_Json_Json_,json.cpp,json_cpp,94.44444444444444,94.44444444444444,0.0,88.88888888888889,88.88888888888889,0.0
+Json_Json_Json_const_,json.cpp,json_cpp,94.11764705882354,94.11764705882354,0.0,88.88888888888889,88.88888888888889,0.0
+Json_Json_unsigned_long_,json.cpp,json_cpp,60.0,60.0,0.0,50.0,50.0,0.0
+Json_Json_unsigned_long_long_,json.cpp,json_cpp,100.0,100.0,0.0,100.0,100.0,0.0
+Json_operatorequal_Json_,json.cpp,json_cpp,91.30434782608695,95.65217391304348,4.34782608695653,76.92307692307692,92.3076923076923,15.384615384615387
+Json_operatorequal_Json_const_,json.cpp,json_cpp,77.27272727272727,95.45454545454545,18.181818181818187,76.92307692307692,92.3076923076923,15.384615384615387
+Json_operator_size_t_,json.cpp,json_cpp,100.0,100.0,0.0,75.0,75.0,0.0
+Json_operator_std_string_const_,json.cpp,json_cpp,100.0,100.0,0.0,100.0,100.0,0.0
+Json_parse_std_string_const_,json.cpp,json_cpp,63.63636363636363,63.63636363636363,0.0,25.0,25.0,0.0
+Json_setArray_,json.cpp,json_cpp,100.0,100.0,0.0,100.0,100.0,0.0
+Json_setObject_,json.cpp,json_cpp,100.0,100.0,0.0,100.0,100.0,0.0
+Json_StatusToString_Json_Status_,json.cpp,json_cpp,97.14285714285714,97.14285714285714,0.0,97.05882352941177,97.05882352941177,0.0
+Json_toStringPretty_,json.cpp,json_cpp,100.0,100.0,0.0,NaN,NaN,NaN
+Json_toString_,json.cpp,json_cpp,100.0,100.0,0.0,NaN,NaN,NaN
+LongToString_charmul_long_long_,json.cpp,json_cpp,100.0,100.0,0.0,100.0,100.0,0.0
+StringToDouble_char_constmul_size_t_intmul_,json.cpp,json_cpp,100.0,100.0,0.0,75.0,75.0,0.0
+UlongToString_charmul_unsigned_long_long_,json.cpp,json_cpp,0.0,100.0,100.0,0.0,66.66666666666667,66.66666666666667
+AVERAGE - json_cpp,,json_cpp,87.6389526190606,96.31289006111399,8.673937442053385,79.81397687280041,90.04474610356964,10.230769230769232
