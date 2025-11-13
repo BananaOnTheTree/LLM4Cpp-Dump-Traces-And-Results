@@ -1,6 +1,13 @@
 Function Name,Statement_CW,Statement_LLM4Cpp,Statement_Δ,Branch_CW,Branch_LLM4Cpp,Branch_Δ
+Json_Json_Json_,72.22,94.44,22.22,66.67,88.89,22.22
+Json_getArray_,66.67,100,33.33,50,100,50
+Json_getBool_,66.67,100,33.33,50,100,50
+Json_operator_size_t_,80,100,20,75,75,0
+Json_operatorequal_Json_,91.3,95.65,4.35,76.92,92.31,15.38
+Json_parse_std_string_const_,90.91,63.64,-27.27,75,25,-50
 StrPair_ParseText_charmul_char_constmul_int_intmul_,94.74,100,5.26,57.14,64.29,7.14
 StrPair_TransferTo_StrPairmul_,94.12,100,5.88,50,60,10
+StringToDouble_char_constmul_size_t_intmul_,85.71,100,14.29,50,75,25
 XMLDocument_Accept_XMLVisitormul_,33.33,88.89,55.56,12.5,62.5,50
 XMLDocument_Identify_charmul_XMLNodemulmul_bool_,87.5,93.75,6.25,64.29,71.43,7.14
 XMLElement_Accept_XMLVisitormul_,88.89,88.89,0,50,37.5,-12.5
@@ -34,6 +41,5 @@ _writeMapElemBegin_Encodermul_,32.26,45.16,12.9,22.22,33.33,11.11
 _writeValueBegin_Encodermul_,34.62,11.54,-23.08,30.77,7.69,-23.08
 _writeVectorElemBegin_Encodermul_,17.14,42.86,25.71,9.09,36.36,27.27
 init_good_suffix_std_string_const_std_vector_size_t_,100,100,0,91.67,83.33,-8.33
-kmp_table_char_constmul_intmul_int_,100,92.31,-7.69,100,83.33,-16.67
 librarySort_intmul_int_,89.36,100,10.64,70,70,0
 safe_substr_std_string_const_int64_t_int64_t_int64_t_,90,100,10,83.33,100,16.67
