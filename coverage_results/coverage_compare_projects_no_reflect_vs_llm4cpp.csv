@@ -1,0 +1,5 @@
+Project,no_reflect Total Statement Coverage,llm4cpp Total Statement Coverage,no_reflect Total Branch Coverage,llm4cpp Total Branch Coverage
+hjson_cpp,84.12,89.55,73.24,76.35
+json_cpp,92.98,93.42,80.50,81.17
+jvar,86.29,87.95,60.63,62.77
+tinyxml2,93.24,97.26,64.66,70.46

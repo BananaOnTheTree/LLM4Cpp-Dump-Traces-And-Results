@@ -104,6 +104,10 @@ def main():
             "Branch_Δ",
         ])
 
+        # Collect deltas for averaging
+        stmt_deltas = []
+        branch_deltas = []
+
         for func in all_funcs:
             cw_stmt = cw.get(func, {}).get("stmt") if cw.get(func) else None
             llm_stmt = llm.get(func, {}).get("stmt") if llm.get(func) else None
@@ -119,6 +123,16 @@ def main():
             if (llm_branch is not None) and (cw_branch is not None):
                 branch_delta = llm_branch - cw_branch
 
+            # Round deltas to 2 decimal places and set close-to-zero to zero
+            if stmt_delta is not None:
+                stmt_delta = round(stmt_delta, 2)
+                if abs(stmt_delta) < 1e-6:
+                    stmt_delta = 0.0
+            if branch_delta is not None:
+                branch_delta = round(branch_delta, 2)
+                if abs(branch_delta) < 1e-6:
+                    branch_delta = 0.0
+
             # New rule: filter out entries where CITYWALK statement coverage is exactly 0
             if (cw_stmt is not None) and (abs(cw_stmt) < TOL):
                 continue
@@ -126,6 +140,12 @@ def main():
             # Keep the existing rule: skip row if BOTH deltas are zero or missing
             if is_zero_or_nan(stmt_delta) and is_zero_or_nan(branch_delta):
                 continue
+
+            # Collect deltas for averaging
+            if stmt_delta is not None:
+                stmt_deltas.append(stmt_delta)
+            if branch_delta is not None:
+                branch_deltas.append(branch_delta)
 
             writer.writerow([
                 func,
@@ -137,9 +157,28 @@ def main():
                 fmt(branch_delta) if branch_delta is not None else "",
             ])
 
+        # Add average row
+        if stmt_deltas:
+            avg_stmt_delta = round(sum(stmt_deltas) / len(stmt_deltas), 2)
+        else:
+            avg_stmt_delta = None
+        if branch_deltas:
+            avg_branch_delta = round(sum(branch_deltas) / len(branch_deltas), 2)
+        else:
+            avg_branch_delta = None
+
+        writer.writerow([
+            "AVERAGE",
+            "",
+            "",
+            fmt(avg_stmt_delta) if avg_stmt_delta is not None else "",
+            "",
+            "",
+            fmt(avg_branch_delta) if avg_branch_delta is not None else "",
+        ])
+
     print("Wrote:", OUT_CSV)
 
 
 if __name__ == "__main__":
     main()
-

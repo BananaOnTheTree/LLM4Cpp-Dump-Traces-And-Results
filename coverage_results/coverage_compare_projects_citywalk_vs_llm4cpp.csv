@@ -1,0 +1,5 @@
+Project,citywalk Total Statement Coverage,llm4cpp Total Statement Coverage,citywalk Total Branch Coverage,llm4cpp Total Branch Coverage
+hjson_cpp,43.88,89.55,41.23,76.35
+json_cpp,80.25,93.42,69.96,81.17
+jvar,61.63,87.95,43.47,62.77
+tinyxml2,62.74,97.26,38.98,70.46

@@ -1,0 +1,30 @@
+Function Name,File Name,Project,Initial Statement Coverage,Total Statement Coverage,Statement Coverage Change,Initial Branch Coverage,Total Branch Coverage,Branch Coverage Change
+Json_contains_std_string_const_,json.cpp,json_cpp,100.0,100.0,0.0,100.0,100.0,0.0
+Json_getArray_,json.cpp,json_cpp,0.0,66.67,66.67,0.0,50.0,50.0
+Json_getBool_,json.cpp,json_cpp,0.0,66.67,66.67,0.0,50.0,50.0
+Json_getDouble_,json.cpp,json_cpp,0.0,50.0,50.0,0.0,33.33,33.33
+Json_getFloat_,json.cpp,json_cpp,0.0,50.0,50.0,0.0,33.33,33.33
+Json_getLong_,json.cpp,json_cpp,0.0,66.67,66.67,0.0,50.0,50.0
+Json_getNumber_,json.cpp,json_cpp,0.0,60.0,60.0,0.0,50.0,50.0
+Json_getObject_,json.cpp,json_cpp,66.67,66.67,0.0,50.0,50.0,0.0
+Json_getString_,json.cpp,json_cpp,0.0,100.0,100.0,0.0,100.0,100.0
+Json_Json_char_constmul_,json.cpp,json_cpp,75.0,100.0,25.0,50.0,100.0,50.0
+Json_Json_Json_,json.cpp,json_cpp,0.0,22.22,22.22,0.0,11.11,11.11
+Json_Json_Json_const_,json.cpp,json_cpp,0.0,29.41,29.41,0.0,22.22,22.22
+Json_Json_std_string_const_,json.cpp,json_cpp,0.0,0.0,0.0,0.0,0.0,0.0
+Json_Json_unsigned_long_,json.cpp,json_cpp,60.0,60.0,0.0,50.0,50.0,0.0
+Json_Json_unsigned_long_long_,json.cpp,json_cpp,60.0,100.0,40.0,50.0,100.0,50.0
+Json_operatorequal_Json_,json.cpp,json_cpp,0.0,39.13,39.13,0.0,30.77,30.77
+Json_operatorequal_Json_const_,json.cpp,json_cpp,0.0,45.45,45.45,0.0,38.46,38.46
+Json_operator_size_t_,json.cpp,json_cpp,0.0,100.0,100.0,0.0,50.0,50.0
+Json_operator_std_string_const_,json.cpp,json_cpp,100.0,100.0,0.0,50.0,50.0,0.0
+Json_parse_std_string_const_,json.cpp,json_cpp,0.0,63.64,63.64,0.0,25.0,25.0
+Json_setArray_,json.cpp,json_cpp,0.0,75.0,75.0,0.0,50.0,50.0
+Json_setObject_,json.cpp,json_cpp,75.0,75.0,0.0,50.0,50.0,0.0
+Json_StatusToString_Json_Status_,json.cpp,json_cpp,0.0,0.0,0.0,0.0,0.0,0.0
+Json_toStringPretty_,json.cpp,json_cpp,100.0,100.0,0.0,0.0,0.0,0.0
+Json_toString_,json.cpp,json_cpp,100.0,100.0,0.0,0.0,0.0,0.0
+LongToString_charmul_long_long_,json.cpp,json_cpp,100.0,100.0,0.0,100.0,100.0,0.0
+StringToDouble_char_constmul_size_t_intmul_,json.cpp,json_cpp,100.0,100.0,0.0,100.0,100.0,0.0
+UlongToString_charmul_unsigned_long_long_,json.cpp,json_cpp,100.0,100.0,0.0,66.67,66.67,0.0
+AVERAGE - json_cpp,,json_cpp,37.02,69.16,32.14,23.81,48.6,24.79

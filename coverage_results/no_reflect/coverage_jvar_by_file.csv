@@ -1,0 +1,5 @@
+File Name,Project,Initial Statement Coverage,Total Statement Coverage,Statement Coverage Change,Initial Branch Coverage,Total Branch Coverage,Branch Coverage Change
+arr.cpp,jvar,52.14,83.87,31.74,34.46,55.3,20.83
+json.cpp,jvar,78.86,89.98,11.11,49.04,49.04,0.0
+str.cpp,jvar,88.94,95.48,6.54,69.89,72.31,2.42
+var.cpp,jvar,57.57,76.82,19.25,42.05,54.51,12.46

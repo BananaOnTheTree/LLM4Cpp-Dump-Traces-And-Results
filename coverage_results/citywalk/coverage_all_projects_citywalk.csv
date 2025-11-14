@@ -1,0 +1,5 @@
+Project,Initial Statement Coverage,Total Statement Coverage,Statement Coverage Change,Initial Branch Coverage,Total Branch Coverage,Branch Coverage Change
+hjson_cpp,43.88,43.88,0.0,41.23,41.23,0.0
+json_cpp,80.25,80.25,0.0,69.96,69.96,0.0
+jvar,61.63,61.63,0.0,43.47,43.47,0.0
+tinyxml2,62.74,62.74,0.0,38.98,38.98,0.0

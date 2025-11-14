@@ -1,2 +1,2 @@
 File Name,Project,Initial Statement Coverage,Total Statement Coverage,Statement Coverage Change,Initial Branch Coverage,Total Branch Coverage,Branch Coverage Change
-json.cpp,json_cpp,81.00310317701623,81.00310317701623,0.0,72.90095525389643,72.90095525389643,0.0
+json.cpp,json_cpp,80.25,80.25,0.0,69.96,69.96,0.0

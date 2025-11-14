@@ -1,0 +1,5 @@
+,arr.cpp,hjson_decode.cpp,hjson_encode.cpp,json.cpp,str.cpp,tinyxml2.cpp,var.cpp,Avg
+llm4cpp,65.3,76.06,76.8,65.8,71.77,70.46,55.98,68.88
+W/o iteration,-33.34,-8.68,-12.79,-3.15,-9.94,-6.8,-16.47,-13.02
+W/o reflect,-10.0,-1.93,-4.94,-1.03,0.54,-5.8,-1.47,-3.52
+W/o context,-30.78,-40.03,-18.5,-20.09,-7.52,-9.32,-32.47,-22.67

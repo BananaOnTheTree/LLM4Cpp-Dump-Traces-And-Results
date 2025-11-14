@@ -1,6 +1,8 @@
+#!/usr/bin/env python3
 import os
 import json
 import csv
+import argparse
 
 def analyze_test_logs(base_path):
     """
@@ -89,22 +91,56 @@ def analyze_test_logs(base_path):
                                         return float(value)
                                     except ValueError:
                                         return 0.0
-                                return float(value)
+                                try:
+                                    return float(value)
+                                except Exception:
+                                    return 0.0
+
+                            # Helper function to round numeric values to 2 decimal places, preserving NaN
+                            def round_if_numeric(value, decimals=2):
+                                if value == 'NaN':
+                                    return value
+                                if isinstance(value, (int, float)):
+                                    rounded = round(value, decimals)
+                                    if rounded == 0.0:
+                                        return 0.0
+                                    return rounded
+                                return value
 
                             initial_stmt_cov = to_coverage_value(ai_0_data.get('statementCoverage', 0))
                             initial_branch_cov = to_coverage_value(ai_0_data.get('branchCoverage', 0))
 
-                            total_stmt_cov = to_coverage_value(coverage_data.get('statementCoverage', 0))
-                            total_branch_cov = to_coverage_value(coverage_data.get('branchCoverage', 0))
+                            total_stmt_cov = to_coverage_value(coverage_data.get('stmtCov', 0))
+                            total_branch_cov = to_coverage_value(coverage_data.get('branchCov', 0))
+
+                            # If there are zero statements/branches, treat related coverage values as 'NaN'
+                            # so they are skipped in averages and shown as NaN in outputs
+                            if coverage_data.get('totalStatements', 0) == 0:
+                                initial_stmt_cov = 0
+                                total_stmt_cov = 0
+
+                            if coverage_data.get('totalBranches', 0) == 0:
+                                initial_branch_cov = 0
+                                total_branch_cov = 0
 
                             # Calculate changes, handling NaN values
                             def calc_change(total, initial):
-                                if total == 'NaN' or initial == 'NaN':
-                                    return 'NaN'
-                                return total - initial
+                                ret = total - initial
+                                # Round to 0 if very close to zero
+                                if abs(ret) < 1e-6:
+                                    return 0.0
+                                return ret
 
                             stmt_change = calc_change(total_stmt_cov, initial_stmt_cov)
                             branch_change = calc_change(total_branch_cov, initial_branch_cov)
+
+                            # Round all numeric values to 2 decimal places
+                            initial_stmt_cov = round_if_numeric(initial_stmt_cov)
+                            initial_branch_cov = round_if_numeric(initial_branch_cov)
+                            total_stmt_cov = round_if_numeric(total_stmt_cov)
+                            total_branch_cov = round_if_numeric(total_branch_cov)
+                            stmt_change = round_if_numeric(stmt_change)
+                            branch_change = round_if_numeric(branch_change)
 
                             results.append({
                                 'Function Name': function_name,
@@ -151,6 +187,24 @@ def calculate_averages(results):
     avg_initial_branch = avg_skip_nan([r['Initial Branch Coverage'] for r in results])
     avg_total_branch = avg_skip_nan([r['Total Branch Coverage'] for r in results])
     avg_branch_change = avg_skip_nan([r['Branch Coverage Change'] for r in results])
+
+    # Round averages to 2 decimal places
+    def round_if_numeric(value, decimals=2):
+        if value == 'NaN':
+            return value
+        if isinstance(value, (int, float)):
+            rounded = round(value, decimals)
+            if rounded == 0.0:
+                return 0.0
+            return rounded
+        return value
+
+    avg_initial_stmt = round_if_numeric(avg_initial_stmt)
+    avg_total_stmt = round_if_numeric(avg_total_stmt)
+    avg_stmt_change = round_if_numeric(avg_stmt_change)
+    avg_initial_branch = round_if_numeric(avg_initial_branch)
+    avg_total_branch = round_if_numeric(avg_total_branch)
+    avg_branch_change = round_if_numeric(avg_branch_change)
 
     return {
         'Function Name': 'AVERAGE',
@@ -228,7 +282,7 @@ def export_to_csv_by_project(results, output_base_dir):
             if avg_row:
                 avg_row['Function Name'] = f'AVERAGE - {project_name}'
                 avg_row['Project'] = project_name
-                # Remove Main Folder from avg_row
+                # Remove Main Folder from avg_row if present
                 avg_row.pop('Main Folder', None)
                 project_results_with_avg = clean_project_results + [avg_row]
             else:
@@ -267,20 +321,64 @@ def export_to_csv_by_project(results, output_base_dir):
         print(f"Exported combined {main_folder} file with {len(main_folder_results)} functions to {combined_file}\n")
 
 
+def filter_important(results):
+    """
+    Filter results to only include methods with initial statement coverage < 100.
+
+    Rules:
+      - If 'Initial Statement Coverage' is numeric and < 100.0 -> include.
+      - If 'Initial Statement Coverage' is 'NaN' (string) -> exclude.
+      - If it's non-numeric but convertible to float via earlier conversion, it will be numeric.
+    """
+    filtered = []
+    for r in results:
+        v = r.get('Initial Statement Coverage', 0)
+        # Exclude NaN string explicitly
+        if v == 'NaN':
+            continue
+        # Include numeric values strictly less than 100
+        if isinstance(v, (int, float)) and v < 100.0:
+            filtered.append(r)
+        # If somehow it's a string that looks numeric, attempt to parse
+        else:
+            try:
+                fv = float(v)
+                if fv < 100.0:
+                    filtered.append(r)
+            except Exception:
+                # If cannot parse, skip (safer)
+                continue
+    return filtered
+
 def main():
+    parser = argparse.ArgumentParser(description="Analyze ai_test_logs coverage and export CSV summaries.")
+    parser.add_argument('--base-path', '-b', help="Path to ai_test_logs folder. Defaults to script directory + 'ai_test_logs'.", default=None)
+    parser.add_argument('--output-dir', '-o', help="Output directory for CSV files. Defaults to script directory + 'coverage_results'.", default=None)
+    parser.add_argument('--important', action='store_true', help="If set, only consider methods with initial statement coverage < 100.")
+    args = parser.parse_args()
+
     # Get the base path
     script_dir = os.path.dirname(os.path.abspath(__file__))
-    base_path = os.path.join(script_dir, 'ai_test_logs')
+    base_path = args.base_path if args.base_path else os.path.join(script_dir, 'ai_test_logs')
 
     print(f"Analyzing test logs in: {base_path}")
 
     # Analyze logs
     results = analyze_test_logs(base_path)
 
-    print(f"Found {len(results)} functions with coverage data\n")
+    print(f"Found {len(results)} functions with coverage data before filtering\n")
+
+    # Apply 'important' filter if requested
+    if args.important:
+        before_count = len(results)
+        results = filter_important(results)
+        after_count = len(results)
+        print(f"'important' option enabled: filtered functions from {before_count} -> {after_count} (only initial statement coverage < 100)\n")
+
+    print(f"Proceeding with {len(results)} functions after filtering\n")
 
     # Create output directory
-    output_dir = os.path.join(script_dir, 'coverage_results')
+    output_dir = args.output_dir if args.output_dir else os.path.join(script_dir, 'coverage_results')
     os.makedirs(output_dir, exist_ok=True)
 
     # Export to CSV files

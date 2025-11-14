@@ -1,0 +1,9 @@
+File Name,Project,no_reflect Total Statement Coverage,llm4cpp Total Statement Coverage,no_reflect Total Branch Coverage,llm4cpp Total Branch Coverage
+hjson_decode.cpp,hjson_cpp,88.25,91.17,74.13,76.06
+hjson_encode.cpp,hjson_cpp,77.78,87.06,71.86,76.80
+json.cpp,json_cpp,92.98,93.42,80.50,81.17
+arr.cpp,jvar,83.87,89.43,55.30,65.30
+json.cpp,jvar,89.98,89.98,49.04,50.43
+str.cpp,jvar,95.48,95.48,72.31,71.77
+var.cpp,jvar,76.82,78.87,54.51,55.98
+tinyxml2.cpp,tinyxml2,93.24,97.26,64.66,70.46
